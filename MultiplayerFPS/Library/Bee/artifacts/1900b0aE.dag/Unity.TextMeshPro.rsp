@@ -42,6 +42,7 @@
 -define:PLATFORM_ARCH_64
 -define:UNITY_64
 -define:UNITY_INCLUDE_TESTS
+-define:UNITY_ENABLE_CLOUD_SERVICES_ENGINE_DIAGNOSTICS_MANAGED
 -define:ENABLE_AR
 -define:ENABLE_AUDIO
 -define:ENABLE_AUDIO_SCRIPTABLE_PIPELINE
@@ -147,6 +148,8 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_FONT_ENGINE_1_6_OR_NEWER
+-define:FISHNET
+-define:FISHNET_V4
 -define:UNITY_XR_VISIONOS_SUPPORTED
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
@@ -160,6 +163,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Runtime.CompilerServices.Unsafe.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Text.Encodings.Web.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/ref/System.Text.Json.dll"
+-r:"Assets/FishNet/Runtime/Plugins/CodeAnalysis/FishNet.CodeAnalysis.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/Managed/Bootstrap/Unity.Scripting.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/6000.6.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.AIModule.dll"
