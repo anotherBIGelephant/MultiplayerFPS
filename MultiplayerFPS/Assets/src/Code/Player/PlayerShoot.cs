@@ -13,6 +13,8 @@ public class PlayerShoot : NetworkBehaviour
     [SerializeField] LayerMask hitMask;
     [SerializeField] ParticleSystem muzzleFlash, hitParticles, bloodParticles;
 
+    PlayerHealth health;
+
     public override void OnStartClient()
     {
         if (!IsOwner)
@@ -22,13 +24,17 @@ public class PlayerShoot : NetworkBehaviour
         }
     }
 
+    void Awake()
+    {
+        health = inputReader.GetComponent<PlayerHealth>();
+    }
+
     public void Update()
     {
         timeTillShot -= Time.deltaTime;
         if (inputReader.FirePressed)
         {
-            //inputReader.ConsumeFire();
-            if(timeTillShot <= 0)
+            if(timeTillShot <= 0 && !health.Dead)
             {
                 Shoot();
             }

@@ -723,7 +723,7 @@ MonoBehaviour:
   _ipv4BindAddress: 
   _enableIpv6: 1
   _ipv6BindAddress: 
-  _port: 7770
+  _port: 7772
   _maximumClients: 10
   _clientAddress: localhost
 --- !u!114 &796661975

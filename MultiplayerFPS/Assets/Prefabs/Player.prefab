@@ -180,7 +180,6 @@ GameObject:
   - component: {fileID: 3448907955399331310}
   - component: {fileID: 5994092885799420313}
   - component: {fileID: 8074309687536169459}
-  - component: {fileID: 3840826396898627067}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -260,29 +259,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3840826396898627067
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5275508787934603589}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8198372925960740095
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +444,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 4687183835906706093}
   _networkObjectCache: {fileID: 4687183835906706093}
   playerInput: {fileID: -1675778527239831769}
-  playerCamera: {fileID: 8198372925960740095}
+  playerCamera: {fileID: 1577386368621118387}
   audioListener: {fileID: 284378916381454135}
 --- !u!1 &8346131052959290246
 GameObject:
@@ -486,6 +462,7 @@ GameObject:
   - component: {fileID: 9221596119455648181}
   - component: {fileID: 1253010175282277057}
   - component: {fileID: 869243153661081788}
+  - component: {fileID: 1498597175801790376}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -798,6 +775,22 @@ MonoBehaviour:
   _preventDespawnOnDisconnect: 0
   _defaultDespawnType: 0
   _initializedTimestamp: -8584085023093865427
+--- !u!114 &1498597175801790376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8346131052959290246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4f5461dd4db9b4cb972e4e875c9509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 869243153661081788}
+  _networkObjectCache: {fileID: 0}
+  maxHealth: 100
 --- !u!1001 &4371694805314597965
 PrefabInstance:
   m_ObjectHideFlags: 0

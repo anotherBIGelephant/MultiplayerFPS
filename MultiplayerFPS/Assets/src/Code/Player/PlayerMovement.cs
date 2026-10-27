@@ -14,6 +14,8 @@ public class PlayerMovement : NetworkBehaviour
 
     private float verticalVelocity;
 
+    PlayerHealth health;
+
     public struct MoveData : IReplicateData
     {
         public Vector2 Move;
@@ -59,6 +61,8 @@ public class PlayerMovement : NetworkBehaviour
 
         if (inputReader == null)
             inputReader = GetComponent<PlayerInputReader>();
+        if(health == null)
+            health = GetComponent<PlayerHealth>();
     }
 
     public override void OnStartNetwork()
@@ -96,6 +100,8 @@ public class PlayerMovement : NetworkBehaviour
         ReplicateState state = ReplicateState.Invalid,
         Channel channel = Channel.Unreliable)
     {
+        if(health.Dead)
+            return;
         float dt = (float)base.TimeManager.TickDelta;
 
         Vector3 move = transform.right * data.Move.x
