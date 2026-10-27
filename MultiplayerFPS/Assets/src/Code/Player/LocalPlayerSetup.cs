@@ -12,6 +12,11 @@ public class LocalPlayerSetup : NetworkBehaviour
     {
         bool isLocalPlayer = IsOwner;
 
+        if (isLocalPlayer)
+        {
+            playerInput.gameObject.layer = 7;
+        }
+
         if (playerInput != null)
             playerInput.enabled = isLocalPlayer;
 

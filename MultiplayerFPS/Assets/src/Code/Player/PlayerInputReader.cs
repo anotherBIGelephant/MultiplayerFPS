@@ -26,8 +26,7 @@ public class PlayerInputReader : MonoBehaviour
 
     public void OnShoot(InputAction.CallbackContext value)
     {
-        if (value.performed)
-            FirePressed = true;
+        FirePressed = value.performed;
     }
 
     public void ConsumeJump()
